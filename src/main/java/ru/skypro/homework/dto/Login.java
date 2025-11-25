@@ -19,4 +19,20 @@ public class Login {
     @Size(min = 8, max = 16)
     @Schema(description = "Пароль пользователя", example = "secretPass")
     private String password;
+
+    public @NotBlank @Size(min = 4, max = 32) String getUsername() {
+        return username;
+    }
+
+    public @NotBlank @Size(min = 8, max = 16) String getPassword() {
+        return password;
+    }
+
+    public void setUsername(@NotBlank @Size(min = 4, max = 32) String username) {
+        this.username = username;
+    }
+
+    public void setPassword(@NotBlank @Size(min = 8, max = 16) String password) {
+        this.password = password;
+    }
 }

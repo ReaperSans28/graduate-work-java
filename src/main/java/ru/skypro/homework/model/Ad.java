@@ -51,5 +51,25 @@ public class Ad {
 
     @OneToMany(mappedBy = "ad", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments = new ArrayList<>();
+
+    public void setAuthor(User author) {
+        this.author = author;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }
 

@@ -39,4 +39,40 @@ public class Register {
 
     @Schema(description = "Роль пользователя", example = "USER")
     private Role role = Role.USER;
+
+    public @NotBlank @Size(min = 4, max = 32) String getUsername() {
+        return username;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public @NotBlank @Size(min = 8, max = 16) String getPassword() {
+        return password;
+    }
+
+    public void setUsername(@NotBlank @Size(min = 4, max = 32) String username) {
+        this.username = username;
+    }
+
+    public void setPassword(@NotBlank @Size(min = 8, max = 16) String password) {
+        this.password = password;
+    }
+
+    public void setFirstName(@NotBlank @Size(min = 2, max = 16) String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(@NotBlank @Size(min = 2, max = 16) String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setPhone(@NotBlank @Pattern(regexp = "\\+7\\s?\\(?\\d{3}\\)?\\s?\\d{3}-?\\d{2}-?\\d{2}") String phone) {
+        this.phone = phone;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 }

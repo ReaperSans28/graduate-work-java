@@ -28,6 +28,13 @@ public class UserServiceImpl implements UserService {
     private final PasswordEncoder passwordEncoder;
     private final ImageService imageService;
 
+    public UserServiceImpl(UserRepository userRepository, UserMapper userMapper, PasswordEncoder passwordEncoder, ImageService imageService) {
+        this.userRepository = userRepository;
+        this.userMapper = userMapper;
+        this.passwordEncoder = passwordEncoder;
+        this.imageService = imageService;
+    }
+
     @Override
     public User register(Register register) {
         if (userRepository.findByEmail(register.getUsername()).isPresent()) {

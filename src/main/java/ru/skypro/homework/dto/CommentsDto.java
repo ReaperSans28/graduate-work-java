@@ -14,5 +14,15 @@ public class CommentsDto {
 
     @Schema(description = "Комментарии")
     private List<CommentDto> results;
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
+
+    public void setResults(List<CommentDto> results) {
+        this.results = results;
+    }
 }
+
 

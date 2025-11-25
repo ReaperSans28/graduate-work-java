@@ -33,5 +33,34 @@ public class Image {
     @Basic(fetch = FetchType.LAZY)
     @Column(name = "data", nullable = false)
     private byte[] data;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+    }
+
+    public void setFileSize(Long fileSize) {
+        this.fileSize = fileSize;
+    }
+
+    public void setData(byte[] data) {
+        this.data = data;
+    }
+
+    public String getMediaType() {
+        return mediaType;
+    }
+
+    public byte[] getData() {
+        return data;
+    }
+
+    public Long getFileSize() {
+        return fileSize;
+    }
 }
+
 

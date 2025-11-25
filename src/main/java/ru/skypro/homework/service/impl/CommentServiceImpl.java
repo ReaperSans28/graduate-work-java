@@ -31,6 +31,13 @@ public class CommentServiceImpl implements CommentService {
     private final AdRepository adRepository;
     private final UserService userService;
 
+    public CommentServiceImpl(CommentRepository commentRepository, CommentMapper commentMapper, AdRepository adRepository, UserService userService) {
+        this.commentRepository = commentRepository;
+        this.commentMapper = commentMapper;
+        this.adRepository = adRepository;
+        this.userService = userService;
+    }
+
     @Override
     @Transactional(readOnly = true)
     public CommentsDto getComments(Long adId) {

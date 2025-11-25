@@ -28,5 +28,17 @@ public class CreateOrUpdateAdDto {
     @Size(min = 8, max = 64)
     @Schema(description = "Описание объявления")
     private String description;
+
+    public void setTitle(@NotBlank @Size(min = 4, max = 32) String title) {
+        this.title = title;
+    }
+
+    public void setPrice(@NotNull @Min(0) @Max(10000000) Integer price) {
+        this.price = price;
+    }
+
+    public void setDescription(@NotBlank @Size(min = 8, max = 64) String description) {
+        this.description = description;
+    }
 }
 

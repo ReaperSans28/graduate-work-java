@@ -17,6 +17,10 @@ public class ImageController {
 
     private final ImageService imageService;
 
+    public ImageController(ImageService imageService) {
+        this.imageService = imageService;
+    }
+
     @GetMapping("/images/{id}")
     public ResponseEntity<byte[]> getImage(@PathVariable Long id) {
         Image image = imageService.getImage(id);

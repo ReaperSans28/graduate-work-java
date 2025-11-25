@@ -37,5 +37,22 @@ public class Comment {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ad_id", nullable = false)
     private Ad ad;
+
+    public void setAuthor(User author) {
+        this.author = author;
+    }
+
+    public void setAd(Ad ad) {
+        this.ad = ad;
+    }
+
+    public Ad getAd() {
+        return ad;
+    }
+
+    public User getAuthor() {
+        return author;
+    }
 }
+
 

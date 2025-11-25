@@ -116,7 +116,6 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                   defaultValueComputed: CURRENT_TIMESTAMP
-                  defaultValueComputed: CURRENT_TIMESTAMP
               - column:
                   name: author_id
                   type: BIGINT

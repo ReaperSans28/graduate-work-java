@@ -19,5 +19,14 @@ public class NewPasswordDto {
     @Size(min = 8, max = 16)
     @Schema(description = "Новый пароль")
     private String newPassword;
+
+    public @NotBlank @Size(min = 8, max = 16) String getCurrentPassword() {
+        return currentPassword;
+    }
+
+    public @NotBlank @Size(min = 8, max = 16) String getNewPassword() {
+        return newPassword;
+    }
 }
+
 
