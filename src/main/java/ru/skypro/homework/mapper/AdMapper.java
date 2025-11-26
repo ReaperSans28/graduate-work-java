@@ -34,6 +34,7 @@ public interface AdMapper {
     @Mapping(target = "title", source = "dto.title")
     @Mapping(target = "price", source = "dto.price")
     @Mapping(target = "description", source = "dto.description")
+    @Mapping(target = "id", ignore = true)
     @Mapping(target = "createdAt", ignore = true)
     @Mapping(target = "author", ignore = true)
     @Mapping(target = "image", ignore = true)

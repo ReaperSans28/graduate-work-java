@@ -34,13 +34,6 @@ public class AdServiceImpl implements AdService {
     private final ImageService imageService;
     private final AdMapper adMapper;
 
-    public AdServiceImpl(AdRepository adRepository, UserService userService, ImageService imageService, AdMapper adMapper) {
-        this.adRepository = adRepository;
-        this.userService = userService;
-        this.imageService = imageService;
-        this.adMapper = adMapper;
-    }
-
     @Override
     @Transactional(readOnly = true)
     public AdsDto getAllAds() {

@@ -15,11 +15,6 @@ public class AuthServiceImpl implements AuthService {
     private final AuthenticationManager authenticationManager;
     private final UserService userService;
 
-    public AuthServiceImpl(AuthenticationManager authenticationManager, UserService userService) {
-        this.authenticationManager = authenticationManager;
-        this.userService = userService;
-    }
-
     @Override
     public void login(String userName, String password) {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userName, password));

@@ -15,6 +15,8 @@ public interface UserMapper {
     @Mapping(target = "image", source = "image")
     UserDto toDto(User user);
 
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "email", source = "username")
     @Mapping(target = "password", source = "password")
     @Mapping(target = "ads", ignore = true)
     @Mapping(target = "comments", ignore = true)
@@ -24,6 +26,13 @@ public interface UserMapper {
     @Mapping(target = "firstName", source = "dto.firstName")
     @Mapping(target = "lastName", source = "dto.lastName")
     @Mapping(target = "phone", source = "dto.phone")
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "email", ignore = true)
+    @Mapping(target = "password", ignore = true)
+    @Mapping(target = "role", ignore = true)
+    @Mapping(target = "image", ignore = true)
+    @Mapping(target = "ads", ignore = true)
+    @Mapping(target = "comments", ignore = true)
     void updateUser(UpdateUserDto dto, @MappingTarget User user);
 }
 

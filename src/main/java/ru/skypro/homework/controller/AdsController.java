@@ -41,10 +41,6 @@ public class AdsController {
 
     private final AdService adService;
 
-    public AdsController(AdService adService) {
-        this.adService = adService;
-    }
-
     @GetMapping
     @Operation(summary = "Получение всех объявлений")
     public AdsDto getAllAds() {

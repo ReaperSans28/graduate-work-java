@@ -24,6 +24,7 @@ public interface CommentMapper {
     Comment toEntity(CreateOrUpdateCommentDto dto);
 
     @Mapping(target = "text", source = "dto.text")
+    @Mapping(target = "id", ignore = true)
     @Mapping(target = "createdAt", ignore = true)
     @Mapping(target = "author", ignore = true)
     @Mapping(target = "ad", ignore = true)

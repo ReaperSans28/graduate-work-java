@@ -34,10 +34,6 @@ public class CommentController {
 
     private final CommentService commentService;
 
-    public CommentController(CommentService commentService) {
-        this.commentService = commentService;
-    }
-
     @GetMapping
     @Operation(summary = "Получение комментариев объявления")
     public CommentsDto getComments(@PathVariable Long adId) {

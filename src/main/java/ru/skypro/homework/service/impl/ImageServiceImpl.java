@@ -19,10 +19,6 @@ public class ImageServiceImpl implements ImageService {
 
     private final ImageRepository imageRepository;
 
-    public ImageServiceImpl(ImageRepository imageRepository) {
-        this.imageRepository = imageRepository;
-    }
-
     @Override
     public Image save(MultipartFile file) {
         return imageRepository.save(buildImage(new Image(), file));
