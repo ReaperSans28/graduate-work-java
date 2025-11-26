@@ -9,3 +9,4 @@ public interface AdRepository extends JpaRepository<Ad, Long> {
     List<Ad> findAllByAuthorId(Long authorId);
 }
 
+

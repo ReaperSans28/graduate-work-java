@@ -30,3 +30,4 @@ public interface CommentMapper {
     void updateComment(CreateOrUpdateCommentDto dto, @MappingTarget Comment comment);
 }
 
+

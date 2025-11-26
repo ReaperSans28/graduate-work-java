@@ -35,3 +35,4 @@ public class ExtendedAdDto {
     private String title;
 }
 
+

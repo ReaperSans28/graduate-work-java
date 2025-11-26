@@ -41,3 +41,4 @@ public interface AdMapper {
     void updateAd(CreateOrUpdateAdDto dto, @MappingTarget Ad ad);
 }
 
+
